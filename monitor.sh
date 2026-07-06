@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo "================================="
+echo "EC2 MONITORING REPORT"
+echo "Date: $(date)"
+echo "================================="
+
+echo ""
 echo "===== Running Services ====="
 systemctl list-units --type=service --state=running
 
@@ -14,3 +20,8 @@ free -h
 echo ""
 echo "===== Disk Usage ====="
 df -h
+
+echo ""
+echo "================================="
+echo "Report Completed"
+echo "================================="
